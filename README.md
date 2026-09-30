@@ -1,5 +1,13 @@
 # Birthday Afnan — reusable control backend
 
+## Phase 1 content foundation
+
+The schema-driven content foundation lives in `src/cms/`. See `docs/CONTENT_MODEL.md`, `docs/COMPONENT_REGISTRY.md`, `docs/EDITOR_SCHEMA.md` and `docs/PHASE_1_REPORT.md`.
+
+With Node 22.18+ (CI uses Node 24), run `npm ci`, `npm test` and `npm run check`. Check includes strict TypeScript checking of the shared modules plus legacy syntax checks. There are no runtime package dependencies; TypeScript is a pinned development dependency.
+
+`fixtures/sample-document.json` is a synthetic schema-v2 example with placeholder assets. Existing admin/Edge Functions still use v1: do not publish this fixture through the old endpoint. Draft persistence, public rendering and the visual editor are delivered in subsequent phases.
+
 Extracted from Dellybizz/birthday-site main at 1e605a0afdcec37776d804b3f6ddc89afc7b6726. This is a fresh backend starter, not a copy of the birthday experience.
 
 ## Included

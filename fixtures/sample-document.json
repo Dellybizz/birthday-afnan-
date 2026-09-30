@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 2,
+  "registryVersion": 1,
+  "siteId": "site_afnan",
+  "general": {
+    "name": "",
+    "nickname": "",
+    "birthdayDate": "",
+    "timezone": "Asia/Kolkata",
+    "locale": "en",
+    "appearance": {
+      "accent": "#B44968",
+      "background": "#FFF7F2",
+      "text": "#30252B",
+      "font": "system",
+      "radius": 24,
+      "spacing": 16
+    },
+    "music": {
+      "enabled": false,
+      "volume": 0.5,
+      "loop": false,
+      "assetIds": []
+    },
+    "animation": {
+      "preset": "none",
+      "duration": 300,
+      "reducedMotion": true
+    }
+  },
+  "pages": [
+    {
+      "id": "page_home",
+      "kind": "page",
+      "type": "page.standard",
+      "title": "Home",
+      "enabled": true,
+      "settings": {
+        "slug": "/",
+        "metaTitle": "",
+        "description": "",
+        "shell": "default"
+      },
+      "children": [
+        {
+          "id": "greeting",
+          "kind": "section",
+          "type": "section.greeting",
+          "title": "Greeting",
+          "enabled": true,
+          "settings": {
+            "alignment": "center"
+          },
+          "children": [
+            {
+              "id": "heading",
+              "kind": "element",
+              "type": "text.heading",
+              "title": "Heading",
+              "enabled": true,
+              "settings": {
+                "text": "Happy birthday, {{general.name}}",
+                "level": 1
+              }
+            },
+            {
+              "id": "paragraph",
+              "kind": "element",
+              "type": "text.paragraph",
+              "title": "Paragraph",
+              "enabled": true,
+              "settings": {
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "A little birthday space made just for you."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "card",
+              "kind": "block",
+              "type": "block.card",
+              "title": "Card",
+              "enabled": true,
+              "settings": {},
+              "children": [
+                {
+                  "id": "image",
+                  "kind": "element",
+                  "type": "media.image",
+                  "title": "Image",
+                  "enabled": true,
+                  "settings": {
+                    "assetId": "sample_image",
+                    "alt": "Choose a birthday photograph",
+                    "caption": "",
+                    "decorative": false,
+                    "ratio": "natural",
+                    "fit": "cover",
+                    "focalX": 50,
+                    "focalY": 50,
+                    "mobileAssetId": null
+                  }
+                }
+              ]
+            },
+            {
+              "id": "video",
+              "kind": "element",
+              "type": "media.video",
+              "title": "Video",
+              "enabled": true,
+              "settings": {
+                "assetId": "sample_video",
+                "posterAssetId": null,
+                "captionsAssetId": null,
+                "controls": true,
+                "muted": true,
+                "loop": false,
+                "autoplay": false,
+                "preload": "metadata",
+                "ratio": "16:9",
+                "fit": "contain"
+              }
+            },
+            {
+              "id": "button",
+              "kind": "element",
+              "type": "action.button",
+              "title": "Button",
+              "enabled": true,
+              "settings": {
+                "label": "Open",
+                "variant": "primary",
+                "action": {
+                  "kind": "anchor",
+                  "nodeId": "heading"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "id": "menu_main",
+      "kind": "menu",
+      "type": "navigation.menu",
+      "title": "Menu",
+      "enabled": true,
+      "settings": {
+        "label": "Main navigation"
+      },
+      "children": [
+        {
+          "id": "item_home",
+          "kind": "menuItem",
+          "type": "navigation.item",
+          "title": "Menu item",
+          "enabled": true,
+          "settings": {
+            "label": "Home",
+            "icon": "none",
+            "target": {
+              "kind": "page",
+              "pageId": "page_home"
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

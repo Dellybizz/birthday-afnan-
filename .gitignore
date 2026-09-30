@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+admin/config.js
+node_modules/
+.supabase/

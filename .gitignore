@@ -4,3 +4,7 @@
 admin/config.js
 node_modules/
 .supabase/
+admin-v2/config.js
+admin-v2/app.js
+supabase/functions/_shared/cms-api.js
+supabase/.temp/

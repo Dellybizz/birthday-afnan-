@@ -1,10 +1,14 @@
 # Birthday Afnan — reusable control backend
 
+## Phase 2 named administration and private drafts
+
+Named login/recovery and private draft editing are available in `admin-v2/` after setup. Follow `docs/PHASE_2_SETUP.md`; verification limits are in `docs/PHASE_2_REPORT.md`. Run `npm ci --ignore-scripts`, `npm test`, `npm run check`, then `npm run build` before hosting/deploying. The new content API reads only active releases; saving never publishes. The existing `/admin/` and v1 functions remain during the verified login transition.
+
 ## Phase 1 content foundation
 
 The schema-driven content foundation lives in `src/cms/`. See `docs/CONTENT_MODEL.md`, `docs/COMPONENT_REGISTRY.md`, `docs/EDITOR_SCHEMA.md` and `docs/PHASE_1_REPORT.md`.
 
-With Node 22.18+ (CI uses Node 24), run `npm ci`, `npm test` and `npm run check`. Check includes strict TypeScript checking of the shared modules plus legacy syntax checks. There are no runtime package dependencies; TypeScript is a pinned development dependency.
+With Node 22.18+ (CI uses Node 24), run `npm ci`, `npm test` and `npm run check`. Check includes strict TypeScript checking of the shared modules plus legacy syntax checks. The content modules have no runtime package dependencies; TypeScript is a pinned development dependency. Phase 2's admin authentication uses the pinned Supabase SDK.
 
 `fixtures/sample-document.json` is a synthetic schema-v2 example with placeholder assets. Existing admin/Edge Functions still use v1: do not publish this fixture through the old endpoint. Draft persistence, public rendering and the visual editor are delivered in subsequent phases.
 

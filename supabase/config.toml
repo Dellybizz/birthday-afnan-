@@ -1,0 +1,17 @@
+project_id = "birthday-afnan-local"
+
+[auth]
+enable_signup = false
+site_url = "http://127.0.0.1:3000/admin-v2/"
+additional_redirect_urls = ["http://localhost:3000/admin-v2/"]
+
+[auth.email]
+enable_signup = false
+
+# Both new functions perform explicit authorization internally. Public content
+# permits only explicitly public active releases; private drafts require Auth.
+[functions.site-admin-v2]
+verify_jwt = false
+
+[functions.site-content-v2]
+verify_jwt = false

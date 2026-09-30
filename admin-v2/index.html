@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Birthday control panel</title><link rel="stylesheet" href="styles.css"></head>
+<body><main>
+<header><div><p class="eyebrow">BIRTHDAY CONTROL PANEL</p><h1>Your private workspace</h1></div><button id="logout" hidden>Sign out</button></header>
+<p id="status" role="status" aria-live="polite">Loading…</p>
+<section id="login-panel" hidden><h2>Admin sign-in</h2><p>Use your invited administrator account.</p>
+<form id="login-form"><label>Email<input id="email" type="email" autocomplete="username" required></label><label>Password<input id="password" type="password" autocomplete="current-password" required></label><button type="submit">Sign in</button><button id="recover" type="button" class="secondary">Forgot password</button></form></section>
+<section id="recovery-panel" hidden><h2>Set your password</h2><form id="password-form"><label>New password<input id="new-password" type="password" minlength="12" autocomplete="new-password" required></label><button type="submit">Save password</button></form></section>
+<section id="workspace" hidden><div class="toolbar"><label>Site<select id="site"></select></label><button id="load">Reload saved draft</button><button id="initialize" hidden>Create private workspace</button><button id="save" disabled>Save changes</button></div>
+<p id="revision"></p><p class="hint">Changes are saved privately. Publishing and the visual editor arrive in later phases.</p>
+<label>Draft document<textarea id="document" spellcheck="false" rows="24" disabled></textarea></label><p id="validation" role="alert"></p></section>
+</main><script src="config.js"></script><script type="module" src="app.js"></script></body></html>
